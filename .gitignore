@@ -1,0 +1,15 @@
+.idea
+.idea/group_02_lastocichin_rava.iml
+.idea/workspace.xml
+.idea/misc.xml
+library/class_folder/entity_classes/__pycache__/astronaut.cpython-310.pyc
+class_folder/entity_classes/__pycache__/astronaut.cpython-310.pyc
+*.pyc
+
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/modules.xml
+.idea/vcs.xml
+web_service_app/functions/__pycache__/__init__.cpython-310.pyc
+web_service_app/functions/__pycache__/__init__.cpython-310.pyc
+*.pyc
+testing/__pycache__/test_astronaut.cpython-310-pytest-7.2.0.pyc
