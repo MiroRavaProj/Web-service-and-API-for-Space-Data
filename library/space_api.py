@@ -81,7 +81,8 @@ class SpaceApi:
     def url(self):
         return self.__url
 
-    def set_new_url(self, value: str):
+    @url.setter
+    def url(self, value: str):
         self.__url = value
 
     @property
@@ -231,81 +232,3 @@ class SpaceApi:
         url = f"{self.url}/launches/{variable}/'{value}'"
         r = requests.put(url, json=launch.jsonify)
         return r.json()
-
-
-    '''
-if __name__ == '__main__':
-    finder = SpaceApi()
-    print()
-    print(finder.search_astro_by("flights_count", "30"))
-    print()
-    print(finder.find_astro_by("name", "Shaun the Sheep").show_basic_info)
-    print()
-    a = finder.populate_astro("miro rava", "2001-05-22", "None", "italy", "test di prova post", "100", "100",
-                              "prova-landing01", "TST")
-    print(finder.add_astro(a))
-    print()
-    print(finder.find_astro_by("name", "miro rava").show_basic_info)
-    print()
-    print(finder.delete_astro_by("name", "miro rava"))
-    print()
-    print(finder.find_astro_by("name", "miro rava"))
-    print()
-    print(finder.add_astro(a))
-    print()
-    b = finder.populate_astro("Oleg Lastocichin", "boh", "None", "moldova", "test di prova update", "300", "300",
-                              "prova-landing02", "KKK")
-    print(finder.update_astro_by("name", "miro rava", b))
-    print()
-    print(finder.delete_astro_by("name", "Oleg Lastocichin"))
-
-if __name__ == '__main__':
-    finder = SpaceApi()
-    print()
-    print(finder.search_launcher_by("flights", "9"))
-    print()
-    print(finder.find_launcher_by("serial_number", "B1060").show_basic_info)
-    print()
-    a = finder.populate_launcher("Razzo super spaziale", "a1b2c3", "imaginary", "Razzo di prova per api versione 01",
-                                 "250")
-    print(finder.add_launcher(a))
-    print()
-    print(finder.find_launcher_by("serial_number", "a1b2c3").show_basic_info)
-    print()
-    print(finder.delete_launcher_by("serial_number", "a1b2c3"))
-    print()
-    print(finder.find_launcher_by("serial_number", "a1b2c3"))
-    print()
-    print(finder.add_launcher(a))
-    print()
-    b = finder.populate_launcher("Mucca spaziale", "aabbcc", "imaginary", "Razzo di prova per api versione 02",
-                                 "800")
-    print(finder.update_launcher_by("serial_number", "a1b2c3", b))
-    print()
-    print(finder.delete_launcher_by("serial_number", "aabbcc"))
-
-if __name__ == '__main__':
-    finder = SpaceApi()
-    print()
-    print(finder.search_launch_by("name", "sputnik"))
-    print()
-    print(finder.find_launch_by("name", "Sputnik 8K74PS | Sputnik 1").show_basic_info)
-    print()
-    a = finder.populate_launch("Sopra la panca", "2023-09-10", "imaginary", "Balle spaziali",
-                               "Star destroyer", "test for the api, number 01", "Uranus")
-    print(finder.add_launch(a))
-    print()
-    print(finder.find_launch_by("rocket_configuration_full_name", "Star destroyer").show_basic_info)
-    print()
-    print(finder.delete_launch_by("rocket_configuration_full_name", "Star destroyer"))
-    print()
-    print(finder.find_launch_by("rocket_configuration_full_name", "Star destroyer"))
-    print()
-    print(finder.add_launch(a))
-    print()
-    b = finder.populate_launch("Antonucci_space_stuff", "0001-01-01", "imaginary", "Python guys",
-                               "Cosmetics", "test for the api, number 02", "Help me")
-    print(finder.update_launch_by("launch_service_provider_name", "Balle spaziali", b))
-    print()
-    print(finder.delete_launch_by("rocket_configuration_full_name", "Cosmetics"))
-'''

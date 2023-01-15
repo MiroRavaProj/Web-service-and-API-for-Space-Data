@@ -74,7 +74,7 @@ class Astronaut:
 
     @property
     def age_of_death(self):
-        if self.death_date == "" or self.death_date is "None":
+        if self.death_date == "" or self.death_date == "None":
             return "Still Alive!!"
         else:
             death = datetime.strptime(self.__date_of_death, '%Y-%m-%d')

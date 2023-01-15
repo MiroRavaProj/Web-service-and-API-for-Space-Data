@@ -1,10 +1,16 @@
-# Rocket Space Stuff 
+# Rocket-Space-Stuff Project
+Rocket Space Stuff Project is a Web-Service-Application, Library, and Demo Application ensemble.
+* Developed by Miro Rava and Oleg Lastocichin, two undergraduate students at SUPSI, (Lugano, CH)
+
+This Readme contains information mainly for the Library, all the information about the Web-Service-Application and the Demo App, will be contained in a separate report.
+
+# Rocket Space Stuff Library
 
 Rocket Space Stuff is a Python library that allows you to interact with various space-related API endpoints. With this library, you can retrieve information about astronauts, launches, and launchers.
 ## Links and Creators:
 
-* Creator: Miro Rava                        [Linkedin profile](https://www.linkedin.com/in/miro-rava/)
-* Tester: Oleg Lastocichin                  [Linkedin profile](https://www.linkedin.com/in/oleg-lastocichin-845733252/)
+* Library Creator: Miro Rava                        [Linkedin profile](https://www.linkedin.com/in/miro-rava/)
+* Library Tester: Oleg Lastocichin                  [Linkedin profile](https://www.linkedin.com/in/oleg-lastocichin-845733252/)
 
 * [Github page for the entire project](https://github.com/MiroRavaProj/Web-service-and-API-for-Space-Data)
 ## Installation
@@ -16,6 +22,7 @@ python -m pip install rocket-space-stuff
 * From Database:
 ```python
 # Initialize the SpaceAPI client
+from space_py import SpaceApi
 api = SpaceApi()
 
 # Find astronaut by name
@@ -320,7 +327,7 @@ launch = Launch({"name": name, "net": net, "window_start": window_start,
 ```
 
 ## Usage and methods for SpaceApi Objects
-###Populate Astronaut Launch and Launcher with SpaceApi
+### Populate Astronaut Launch and Launcher with SpaceApi
 * Instead of Initializing manually Astronaut, Launch or Launcher Objects, we can use SpaceApi `populate` methods.
 ```python
 from space_py import SpaceApi
