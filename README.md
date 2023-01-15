@@ -4,6 +4,8 @@ Rocket Space Stuff Project is a Web-Service-Application, Library, and Demo Appli
 
 This Readme contains information mainly for the Library, all the information about the Web-Service-Application and the Demo App, will be contained in a separate report.
 
+### The dist folder contains the EXE files for the demo_app, the EXE file for the web_service (if you want to test it locally) and also the library_package as a wheel.  
+
 # Rocket Space Stuff Library
 
 Rocket Space Stuff is a Python library that allows you to interact with various space-related API endpoints. With this library, you can retrieve information about astronauts, launches, and launchers.
